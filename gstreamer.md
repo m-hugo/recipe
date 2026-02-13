@@ -1,12 +1,13 @@
-## fetch
+# fetch
 
-#### git
+### git
+> tested with b3389ed
 1. https://gitlab.freedesktop.org/gstreamer/gstreamer
 2. https://github.com/GStreamer/gstreamer
 
-## build
+# build
 
-#### meson
+### meson
 ```sh
 # comment
 gpl=enabled ugly=disabled tools=enabled
@@ -22,9 +23,9 @@ gst-plugins-base:{ogg,opus,vorbis}=enabled
 gst-plugins-good:{avi,matroska,amrnb,amrwbdec,lame,flac,wavparse,mpg123}=enabled
 ```
 
-## patches
+# patches
 
-#### muon
+### muon support
 ```diff
 diff --git a/scripts/meson.build b/scripts/meson.build
 index c6a875b..fed6f63 100644
@@ -57,7 +58,7 @@ index ef92d89..f66741e 100755
  ]
 ```
 
-#### debloat
+### debloat
 ```diff
 diff --git a/subprojects/gst-plugins-bad/ext/meson.build b/subprojects/gst-plugins-bad/ext/meson.build
 index 6df06c2..918b31a 100644
