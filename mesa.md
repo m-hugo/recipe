@@ -12,4 +12,5 @@ gallium-drivers=radeonsi,zink
 vulkan-drivers=amd
 amd-use-llvm=false
 glx=disabled
+platforms=wayland
 ```
