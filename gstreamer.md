@@ -12,11 +12,14 @@ ugly=disabled # none needed
 ## basic functionality
 {tools,gst-plugins-{base:gl,good:autodetect}}=enabled
 ### only keep the gl backends we care about
-gst-plugins-base:gl_{platform=egl,api=gles2,winsys="egl,wayland"} 
+gst-plugins-base:gl_{platform=egl,api=gles2,winsys="egl,wayland"}
 ## needed by https://www.youtube.com
-gst-plugins-{bad:{debugutils,subenc,videoparsers,faad,openh264},base:{app,audioconvert,audioresample,playback,typefind,videoconvertscale,volume},good:audiofx,good:audioparsers,good:isomp4}=enabled
+gst-plugins-bad:{debugutils,subenc,videoparsers,faad,openh264}=enabled
+gst-plugins-base:{app,audioconvert,audioresample,playback,typefind,videoconvertscale,volume}=enabled
+gst-plugins-good:{audiofx,audioparsers,isomp4}=enabled
 ## needed by https://tools.woolyss.com/html5-audio-video-tester
-gst-plugins-{bad:aom,bad:fdkaac,base:ogg,base:opus,base:vorbis,good:{avi,matroska,amrnb,amrwbdec,lame,flac,wavparse,mpg123}}=enabled
+gst-plugins-{bad:aom,bad:fdkaac,base:ogg,base:opus,base:vorbis}=enabled
+gst-plugins-good:{avi,matroska,amrnb,amrwbdec,lame,flac,wavparse,mpg123}=enabled
 ```
 ## patches
 ### muon support
